@@ -1,0 +1,74 @@
+<html> 
+<head> 
+<style> 
+
+.outer{  
+margin:auto; 
+height:500px; 
+width:1000px; 
+border:4px solid black; 
+position:relative 
+} 
+p{ 
+margin-left:50px; 
+} 
+.in{ 
+margin-left:80px; 
+padding:10px 
+} 
+#bt{ 
+margin-top:20px; 
+position:absolute; 
+left:150px; 
+} 
+#bt:hover{ 
+background:green; 
+font-size:13px; 
+cursor:pointer; 
+color:white; 
+} 
+</style> 
+<script> 
+function fa(){ 
+if(a.value=="" || b.value==""){ 
+f() 
+document.getElementById("a").style.border="3px solid red" 
+document.getElementById("b").style.border="3px solid red" 
+bt.value="Fill Form First" 
+} 
+else{ 
+document.getElementById("a").style.border="3px solid green" 
+document.getElementById("b").style.border="3px solid green" 
+bt.value="Ab theek hai" 
+bt.style.left="120px"; 
+} 
+} 
+flag=1 
+function f(){ 
+if(flag==1){ 
+bt.style.left="210px" 
+flag=2 
+} 
+else if(flag==2){ 
+bt.style.left="80px" 
+flag=1 
+} 
+} 
+</script> 
+</head> 
+<body> 
+<div class="outer"> 
+<h1 style="text-align:center">Agnihotrizi Survey Form</h1> 
+<p>FIRST NAME</p> 
+<input class="in"  placeholder="First Name" id="a"/> 
+<p>LAST NAME</p> 
+<input class="in" placeholder="Last Name" id="b"/> 
+<br> 
+<input type="submit" onmouseenter="fa()" onclick="alert('Information Shared With Agnihotrizi!')" id="bt" /> 
+
+</div> 
+
+</body> 
+
+
+</html>
